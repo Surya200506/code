@@ -1,0 +1,208 @@
+✅ STEP 1: Install Required Software
+1️⃣ Install Git
+
+Download Git → https: git-scm.com/downloads
+Install it with default settings.
+
+2️⃣ Create GitHub Account
+
+Go to → github.com
+Sign up → Verify email → Login.
+
+✅ STEP 2: Create a Multi-Folder Project
+
+You can create any project like this:
+
+myproject/
+│
+├── folderA/
+│     └── a.txt
+│
+├── folderB/
+│     └── b.txt
+│
+└── folderC/
+      └── c.txt
+
+Steps:
+
+Create a folder on desktop → name it myproject
+
+Inside it create 3 subfolders: folderA, folderB, folderC
+
+Inside each folder create a file (a.txt, b.txt, c.txt)
+
+Take screenshot → This is output 1.
+
+✅ STEP 3: Open Git Bash in the Project
+
+Right-click inside the myproject folder → Git Bash Here
+
+You will get a terminal.
+
+✅ STEP 4: Initialize Git (LOCAL REPO)
+
+Run:
+
+git init
+
+
+Output example:
+
+Initialized empty Git repository in C:/Users/.../myproject/.git/
+
+
+(Screenshot this → Output 2)
+
+✅ STEP 5: Configure Git User (Needed Before First Commit)
+git config --global user.name "Your Name"
+git config --global user.email "yourmail@example.com"
+
+
+(Screenshot → Output 3)
+
+✅ STEP 6: Add Files to Git
+
+Check status:
+
+git status
+
+
+Add everything:
+
+git add .
+
+
+Commit:
+
+git commit -m "Initial commit"
+
+
+Screenshots → Output 4, 5, 6.
+
+✅ STEP 7: Create a PRIVATE REPOSITORY on GitHub
+
+On GitHub → click New Repository
+Name: myproject
+Select: Private
+Do NOT add Readme.
+
+Click Create Repository
+
+Copy the repo URL:
+Example:
+
+https://github.com/yourname/myproject.git
+
+✅ STEP 8: Connect Local Repo to GitHub (Remote)
+git remote add origin https://github.com/yourname/myproject.git
+
+
+Check:
+
+git remote -v
+
+
+Take screenshot → Output 7.
+
+✅ STEP 9: Push Project to GitHub
+git branch -M main
+git push -u origin main
+
+
+Take screenshot → Output 8.
+
+Now your multi-folder project is uploaded.
+
+✅ STEP 10: Explore ALL Important Git Commands
+
+Your mam expects you to show outputs of each command.
+
+Below is the full list with explanations + commands + expected output:
+
+📌 LOCAL Commands
+✔ 1. git init
+
+Initialize repository
+(Already done)
+
+✔ 2. git status
+git status
+
+
+Shows staged/unstaged files.
+
+✔ 3. git add
+
+Add single file:
+
+git add folderA/a.txt
+
+
+Add all:
+
+git add .
+
+✔ 4. git commit
+git commit -m "message"
+
+✔ 5. git log
+git log
+
+
+Shows commit history.
+
+✔ 6. git diff
+git diff
+
+
+Shows changes.
+
+✔ 7. git rm
+git rm folderC/c.txt
+
+✔ 8. git mv
+git mv folderA/a.txt folderA/a1.txt
+
+✔ 9. git branch
+git branch feature1
+
+
+Switch branch:
+
+git checkout feature1
+
+📌 REMOTE Commands
+✔ 1. git remote -v
+git remote -v
+
+✔ 2. git push
+git push origin main
+
+
+Push new branch:
+
+git push origin feature1
+
+✔ 3. git pull
+git pull origin main
+
+✔ 4. git clone
+
+(If you download the repo again)
+
+git clone https://github.com/yourname/myproject.git
+
+📌 Scenario-Based Commands
+Scenario 1: Undo last commit (soft reset)
+git reset --soft HEAD~1
+
+Scenario 2: Discard unstaged changes
+git checkout -- .
+
+Scenario 3: Remove remote origin
+git remote remove origin
+
+Scenario 4: Merge two branches
+git checkout main
+git merge feature1
